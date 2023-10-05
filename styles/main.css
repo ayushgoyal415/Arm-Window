@@ -1,0 +1,172 @@
+#main-root {
+  margin-left: 250px;
+  margin-top: 69px;
+  height: 700px;
+}
+
+/* Top */
+#main-root .top {
+  color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+#main-root .top button {
+  all: unset;
+  background-color: rgb(14, 14, 14);
+  color: orange;
+  border: 1px solid rgba(255, 166, 0, 0.364);
+  border-radius: 5px;
+  padding: 7px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+#main-root .top button:hover,
+#main-root .top button:focus {
+  background-color: orange;
+  color: black;
+}
+#main-root .top button:active {
+  background-color: rgba(255, 166, 0, 0.701);
+}
+
+/* Bottom */
+#main-root .bottom {
+  display: grid;
+  padding: 0px 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  row-gap: 15px;
+}
+
+/* Label */
+#main-root .bottom label {
+  color: rgb(167, 141, 95);
+  font-size: 14px;
+}
+#main-root .bottom label span {
+  color: orange;
+}
+
+/* Input */
+#main-root .bottom input {
+  width: 95%;
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid black;
+  outline: none;
+  background-color: black;
+  margin: 5px 0px;
+  opacity: 0.7;
+  color: orange;
+}
+#main-root .bottom input::placeholder {
+  color: rgba(211, 211, 211, 0.29);
+}
+#main-root .bottom input:active,
+#main-root .bottom input:focus {
+  opacity: 1;
+  border-color: rgba(255, 166, 0, 0.364);
+}
+
+/* Select */
+#main-root .bottom select {
+  width: 99%;
+  margin: 5px 0px;
+  background-color: black;
+  color: orange;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid black;
+  padding: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+#main-root .bottom select option {
+  color: white;
+}
+#main-root .bottom option:checked {
+  background-color: rgb(78, 78, 78);
+}
+#main-root .bottom select:focus {
+  opacity: 1;
+  border-color: rgba(255, 166, 0, 0.364);
+}
+
+/* CheckBox */
+#main-root .bottom input[type='checkbox'] {
+  display: none;
+}
+#main-root .bottom .label {
+  all: unset;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 15px 0;
+  color: rgba(211, 211, 211, 0.29);
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+#main-root .bottom .box {
+  position: absolute;
+  inset: 0;
+  height: 15px;
+  width: 15px;
+  opacity: 0.3;
+  background-color: black;
+  border-radius: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.248);
+}
+#main-root .bottom .label:hover .box,
+#main-root .bottom .label:not(:has(:checked)):hover .box:after,
+#main-root .bottom .label:focus .box,
+#main-root .bottom .label:not(:has(:checked)):focus .box:after {
+  opacity: 0.5;
+  display: block;
+}
+#main-root .bottom .label:hover,
+#main-root .bottom .label:not(:has(:checked)):focus {
+  color: rgba(211, 211, 211, 0.701);
+}
+.label:active .box {
+  opacity: 0.7;
+}
+#main-root .bottom .box:after {
+  inset: 1px 0 3px 5px;
+  width: 3px;
+  height: 8px;
+  border: solid rgba(255, 149, 0, 0.856);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: '';
+  position: absolute;
+  display: none;
+}
+#main-root .bottom .label:has(input:checked) .box {
+  opacity: 1;
+}
+#main-root .bottom .label:has(input:checked) .box:after {
+  display: block;
+}
+#main-root .bottom .label:has(input:checked) {
+  color: orange;
+}
+
+/* Field Set */
+#main-root .bottom fieldset {
+  position: relative;
+  color: rgb(167, 141, 95);
+  font-size: 14px;
+  border-radius: 4px;
+  padding-left: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.188);
+  background-color: black;
+}
+#main-root .bottom legend {
+  user-select: none;
+}

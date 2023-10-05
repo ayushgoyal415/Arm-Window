@@ -1,0 +1,19 @@
+#footer-root .bottom{
+  position: fixed;
+  inset: auto 20px 20px auto;
+  padding: 10px 20px;
+  width: 305px;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+#footer-root .bottom:hover{
+  background-color: rgb(30, 30, 30);
+}
+#footer-root .bottom:active{
+  background-color: rgb(40, 40, 40);
+}
+#footer-root .bottom p{
+  margin: 5px 0px;
+}
