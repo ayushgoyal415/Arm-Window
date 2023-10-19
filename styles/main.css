@@ -1,16 +1,17 @@
 #main-root {
   margin-left: 250px;
   margin-top: 69px;
-  height: 700px;
+  
 }
 
 /* Top */
 #main-root .top {
-  color: orange;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 30px;
+  padding: 20px 40px 30px 30px;
+  color: orange;
+  font-size: 20px;
 }
 #main-root .top button {
   all: unset;
@@ -102,6 +103,7 @@
 #main-root .bottom .label {
   all: unset;
   display: block;
+  width: fit-content;
   position: relative;
   padding-left: 30px;
   margin: 15px 0;
@@ -121,14 +123,14 @@
   border: 1px solid rgba(255, 255, 255, 0.248);
 }
 #main-root .bottom .label:hover .box,
-#main-root .bottom .label:not(:has(:checked)):hover .box:after,
-#main-root .bottom .label:focus .box,
-#main-root .bottom .label:not(:has(:checked)):focus .box:after {
+#main-root .bottom .label:not(:has(:checked)):hover .box:after {
   opacity: 0.5;
   display: block;
 }
-#main-root .bottom .label:hover,
-#main-root .bottom .label:not(:has(:checked)):focus {
+#main-root .bottom .label:focus .box {
+  border-color: orange;
+}
+#main-root .bottom .label:hover {
   color: rgba(211, 211, 211, 0.701);
 }
 .label:active .box {

@@ -60,7 +60,7 @@ select_data.forEach(val => {
 
 // Checkbox
 bottom.innerHTML += /* HTML */ `
-  <br>
+  <br />
   <fieldset>
     <legend>Additional Information</legend>
   </fieldset>
@@ -69,7 +69,7 @@ bottom.innerHTML += /* HTML */ `
 const set = bottom.querySelector('fieldset');
 checkbox_data.forEach(val => {
   set.innerHTML += /* HTML */ `
-    <label class="label" for=${val.id} tabindex="0"
+    <label class="label" for=${val.id} tabindex="0" role="button"
       >${val.text}
       <input type="checkbox" name=${val.id} id=${val.id} />
       <div class="box"></div>
@@ -77,10 +77,7 @@ checkbox_data.forEach(val => {
   `;
 });
 bottom.querySelectorAll('.label').forEach(val => {
-  val.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      const checkbox = e.target.querySelector('input');
-      checkbox.checked = !checkbox.checked;
-    }
+  val.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') e.target.click();
   });
 });

@@ -1,19 +1,12 @@
-#footer-root .bottom{
+#footer-root {
   position: fixed;
   inset: auto 20px 20px auto;
   padding: 10px 20px;
   width: 305px;
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.03);
   border-radius: 5px;
-  cursor: pointer;
   user-select: none;
 }
-#footer-root .bottom:hover{
-  background-color: rgb(30, 30, 30);
-}
-#footer-root .bottom:active{
-  background-color: rgb(40, 40, 40);
-}
-#footer-root .bottom p{
+#footer-root p {
   margin: 5px 0px;
 }
